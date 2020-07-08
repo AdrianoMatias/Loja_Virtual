@@ -17,6 +17,7 @@ module.exports = {
     sourceType: 'module',
   },
   plugins: [
+    'plugin:react/recommended',
     'react',
     'prettier'
   ],
