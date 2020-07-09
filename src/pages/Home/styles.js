@@ -13,15 +13,14 @@ export const ProductList = styled.ul`
     background: #fff;
     border-radius: 4px;
     padding: 20px;
-  }
 
-  img {
+    img {
     align-self: center;
     max-width: 250px;
   }
 
   > strong {
-    font-size: 16px;
+    font-size: 14px;
     line-height: 20px;
     color: #333;
     margin-top: 5px;
@@ -32,6 +31,9 @@ export const ProductList = styled.ul`
     font-weight: bold;
     margin: 5px 0 20px;
   }
+  }
+
+
 
   button {
     background: #7159c1;
@@ -59,11 +61,11 @@ export const ProductList = styled.ul`
     svg {
       margin-right: 5px;
     }
-  }
 
- > span {
+    > span {
     flex: 1;
     text-align: center;
     font-weight: bold;
+   }
   }
 `;
