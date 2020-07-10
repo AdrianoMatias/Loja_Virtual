@@ -10,7 +10,7 @@ import { Container, ProductTable, Total } from './styles';
 
 export default function Cart() {
   const total = useSelector(state => formatPrice(
-    state.cart.reduce((totalSum, product) => {
+    state.cart.reduce((total, product) => {
     return total + product.price * product.amount;
  }, 0),
  ));
