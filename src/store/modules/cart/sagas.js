@@ -1,8 +1,9 @@
-import { call, select, put, all, takeLatest, take } from 'redux-saga/effects';
+import { call, select, put, all, takeLatest } from 'redux-saga/effects';
 import { toast } from 'react-toastify';
 
 import api from '../../../services/api';
-import history from '../../../services/history';
+// import history from '../../../services/history';
+
 import { formatPrice } from '../../../Util/format';
 
 import { addToCartSuccess, updateAmountSuccess } from './action';
@@ -26,6 +27,7 @@ function* addToCart({ id }) {
 
   if (productExist) {
     yield put(updateAmountSuccess(id, amount));
+
   }else {
     const response = yield call(api.get, `/products/${id}`);
 
@@ -37,7 +39,7 @@ function* addToCart({ id }) {
 
     yield put(addToCartSuccess(data));
 
-    history.push('/cart');
+    // history.push('/cart');
   }
  }
 
